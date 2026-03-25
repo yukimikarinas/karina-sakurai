@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Karina Sakurai</title>
+
   <style>
     :root {
       --bg: #ffffff;
@@ -41,6 +42,21 @@
       margin-bottom: 56px;
     }
 
+    /* ===== NOVO: layout com foto ===== */
+    .header-flex {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
     h1, h2, h3 {
       font-weight: 500;
       line-height: 1.2;
@@ -75,7 +91,7 @@
     }
 
     .intro {
-      margin-top: 28px;
+      margin-top: 16px;
     }
 
     .post {
@@ -96,6 +112,7 @@
       font-size: 0.95rem;
     }
 
+    /* ===== RESPONSIVO ===== */
     @media (max-width: 640px) {
       body {
         font-size: 17px;
@@ -108,29 +125,55 @@
       h1 {
         font-size: 2rem;
       }
+
+      .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile-img {
+        width: 110px;
+        height: 110px;
+      }
     }
   </style>
 </head>
+
 <body>
   <main class="container">
-    <header>
-      <h1>Karina Sakurai</h1>
-      <p class="subtitle">PhD student</p>
 
-      <div class="intro">
-        <p>
-          Hello, and welcome!
-        </p>
-        <p>
-          I am Karina Sakurai, a PhD student working under the supervision of
-          Professor Dr. <a href="https://bmbumpus.com/about-me/" target="_blank" rel="noopener noreferrer">Benjamin Merlin Bumpus</a>.
-        </p>
-        <p>
-          My current interests include category theory, parameterized complexity, and graph theory.
-        </p>
-        <p>
-          Over the years of my research, I plan to post summaries, notes, and draft materials here as my work develops.
-        </p>
+    <header>
+      <div class="header-flex">
+
+        <!-- FOTO -->
+        <img src="images/profile.png" alt="Karina Sakurai" class="profile-img" />
+
+        <!-- TEXTO -->
+        <div>
+          <h1>Karina Sakurai</h1>
+          <p class="subtitle">PhD student</p>
+
+          <div class="intro">
+            <p>Hello, and welcome!</p>
+
+            <p>
+              I am Karina Sakurai, a PhD student working under the supervision of
+              Professor Dr.
+              <a href="https://bmbumpus.com/about-me/" target="_blank" rel="noopener noreferrer">
+                Benjamin Merlin Bumpus
+              </a>.
+            </p>
+
+            <p>
+              My current interests include category theory, parameterized complexity, and graph theory.
+            </p>
+
+            <p>
+              Over the years of my research, I plan to post summaries, notes, and draft materials here as my work develops.
+            </p>
+          </div>
+        </div>
+
       </div>
     </header>
 
@@ -155,6 +198,7 @@
     <footer>
       <p>Minimal personal page by Karina Sakurai.</p>
     </footer>
+
   </main>
 </body>
 </html>

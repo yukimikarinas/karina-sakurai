@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karina Sakurai</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+      --line: #e5e5e5;
+      --link: #111111;
+      --max-width: 760px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
+
+    header {
+      margin-bottom: 56px;
+    }
+
+    h1, h2, h3 {
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0 0 16px 0;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 48px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    p {
+      margin: 0 0 18px 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-top: -4px;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .intro {
+      margin-top: 28px;
+    }
+
+    .post {
+      padding: 24px 0 8px;
+    }
+
+    .post-meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 64px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        font-size: 17px;
+      }
+
+      .container {
+        padding: 40px 20px 64px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Karina Sakurai</h1>
+      <p class="subtitle">PhD student</p>
+
+      <div class="intro">
+        <p>
+          Hello, and welcome.
+        </p>
+        <p>
+          I am Karina Sakurai, a PhD student working under the supervision of
+          Professor Dr. <a href="https://bmbumpus.com/about-me/" target="_blank" rel="noopener noreferrer">Benjamin Merlin Bumpus</a>.
+        </p>
+        <p>
+          My current interests include category theory, parameterized complexity, and graph theory.
+        </p>
+        <p>
+          Over the years of my research, I plan to post summaries, notes, and draft materials here as my work develops.
+        </p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Posts</h2>
+
+      <article class="post">
+        <div class="post-meta">First post</div>
+        <h3>Hello World</h3>
+        <p>
+          This is my first post.
+        </p>
+        <p>
+          I am starting this page as a simple place to collect thoughts, summaries, and research drafts throughout my PhD journey.
+        </p>
+        <p>
+          More notes and materials will be added here over time.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <p>Minimal personal page by Karina Sakurai.</p>
+    </footer>
+  </main>
+</body>
+</html>

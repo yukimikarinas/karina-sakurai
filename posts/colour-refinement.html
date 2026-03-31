@@ -1,1 +1,69 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colour Refinement</title>
+
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- LIB DO GRAFO -->
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+
+<body>
+  <main class="container">
+
+    <h1>Colour Refinement and the Weisfeiler–Leman Algorithm</h1>
+
+    <p>
+      Colour refinement (also known as naive vertex refinement) is a simple and extremely efficient
+      algorithm used to iteratively distinguish vertices in a graph.
+    </p>
+
+    <h2>Algorithm</h2>
+
+    <p><b>Initialization:</b> all vertices receive the same colour.</p>
+
+    <p>
+      <b>Refinement step:</b> two vertices get different colours if they have different numbers
+      of neighbours of some colour.
+    </p>
+
+    <p>The process repeats until the colouring becomes stable.</p>
+
+    <h2>As an Isomorphism Test</h2>
+
+    <p>
+      Apply the algorithm to the disjoint union of two graphs. If the final colour distribution
+      differs, the graphs are not isomorphic.
+    </p>
+
+    <ul>
+      <li>Distinguishes all trees</li>
+      <li>Fails on some regular graphs</li>
+    </ul>
+
+    <h2>Connection to WL</h2>
+
+    <p>
+      This is exactly the <b>1-dimensional Weisfeiler–Leman algorithm (1-WL)</b>.
+    </p>
+
+    <p>
+      Reference:
+      <a href="https://www.youtube.com/watch?v=ymRBPnDVw0I" target="_blank">
+        Martin Grohe – A Deep Dive into the Weisfeiler–Leman Algorithm
+      </a>
+    </p>
+
+    <h2>Interactive Demo</h2>
+
+    <div id="wl-demo"></div>
+
+    <script src="../assets/wl-demo.js"></script>
+
+  </main>
+</body>
+</html>
